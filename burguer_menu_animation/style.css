@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2e3263;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 2em;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.line {
+  background: #fff;
+  width: 35px;
+  height: 2px;
+  transition: all 0.6s;
+}
+
+.container:hover {
+  transform: rotate(-90deg);
+  height: 1em;
+}
+
+.container:hover .line {
+  background: #747474;
+}
+
+.change .line1 {
+  transform: rotate(-45deg) translate(-5px, 10px);
+}
+
+.change .line2 {
+  width: 0;
+}
+
+.change .line3 {
+  transform: rotate(45deg) translate(-5px, -10px);
+}
+
+.change:hover {
+  transform: rotate(-90deg);
+  height: 2em;
+}
