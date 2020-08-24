@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Press Start 2P", cursive;
+  background: linear-gradient(rgb(126, 126, 126), rgb(236, 235, 235));
+}
+
+.wrap {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 46px;
+  color: #5a5958;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.bouncingball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 6px;
+}
+
+.bouncingball::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  width: 15px;      /* valores alteráveis  */
+  height: 15px;      /* valores alteráveis  */
+  border-radius: 50%;
+  background-color: #5a5958;
+  transform-origin: 50%;
+  animation: bounce 400ms alternate infinite;
+}
+
+.ball2::before {
+  animation-delay: 100ms;
+}
+
+.ball3::before {
+  animation-delay: 200ms;
+}
+
+@keyframes bounce {
+  0% {
+    top: 32px;
+    height: 5px;
+    border-radius: 90%;
+    transform: scaleX(2);
+  }
+  35% {
+    height: 15px;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
