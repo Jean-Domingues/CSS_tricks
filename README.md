@@ -1,2 +1,2 @@
-<h1 align="center"> Efeitos bacanas com CSS </h1>
+<h1 align="center"> Efeitos CSS </h1>
 
