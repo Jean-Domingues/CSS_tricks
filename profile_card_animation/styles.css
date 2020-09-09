@@ -1,4 +1,9 @@
+body {
+  background: #4d4e4e;
+}
+
 .profile-card {
+  font-family: monospace;
   height: 250px;
   width: 200px;
   padding: 15px;
@@ -10,19 +15,52 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 3px 3px 25px rgb(228, 228, 228),
-  -3px -3px 25px rgb(228, 228, 228);
+  box-shadow: 3px 3px 10px rgb(105, 104, 104),
+  -3px -3px 10px rgb(104, 104, 104);
 }
 
 .picture {
   width: 200px;
   height: 250px;
+  
   background-image: url('profile.png');
   background-size: cover;
   border-radius: 10px;
   background-position: center;
+
   position: absolute;
   top: 0;
+
   z-index: 1;
   transition: .5s;
+}
+
+.bio {
+  color: #000000;
+  text-align: center;
+  opacity: 0;
+}
+
+.bio h5 {
+ font-style: italic;
+  margin-top: -15px;
+}
+
+.bio p {
+  font-size: 12px;
+  text-align: justify;
+}
+
+.profile-card:hover .picture {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgb(21, 2, 131);
+  border-radius: 50%;
+  top: -30px;
+}
+
+.profile-card:hover .bio {
+  transition: 1s;
+  transform: scale(1);
+  opacity: 1;
 }
